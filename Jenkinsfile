@@ -11,7 +11,7 @@ pipeline{
         }
          stage("Code"){
                 steps{
-                                        clone("https://github.com/Puruasp/django-notes-app.git", "main")
+                                        clone("https://github.com/Puruasp/jenkis-shared-lib", "main")
                 
             }
          }
@@ -31,7 +31,7 @@ pipeline{
                                       }
             stage("Deploy"){
                 steps{
-                    echo "this is Deploying  the code"
+                    echo "This is Deploying  the code"
                     sh "docker compose up -d"
                                     }
             }
